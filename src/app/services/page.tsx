@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Brain, ChartBar, FileCheck, Laptop, Users } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { TextRotator } from "@/components/ui/text-rotator";
 
 export const metadata = {
   title: "Services",
@@ -23,14 +24,14 @@ const serviceDetails = [
   },
   {
     id: "data-analytics",
-    title: "Data Analytics",
-    description: "Transform your raw data into clear, actionable insights that drive business performance.",
+    title: "Data Analytics & Governance",
+    description: "Transform your raw data into clear, actionable insights while ensuring it is secure, compliant, and properly managed.",
     icon: <ChartBar className="h-8 w-8" />,
     capabilities: [
       "Data-driven decision making frameworks",
-      "Automated reporting systems",
-      "Interactive business dashboards",
-      "Advanced analytics solutions"
+      "Automated reporting & dashboards",
+      "Data compliance and security",
+      "Data lifecycle management"
     ]
   },
   {
@@ -68,16 +69,40 @@ const serviceDetails = [
       "Data-driven applications",
       "Custom technology integrations"
     ]
+  },
+  {
+    id: "staff-augmentation",
+    title: "Staff Augmentation",
+    description: "Scale your capabilities rapidly with our highly trained, industry-ready technical talent.",
+    icon: <Users className="h-8 w-8" />,
+    capabilities: [
+      "Software engineering talent",
+      "Data and AI specialists",
+      "Temporary project scaling",
+      "Seamless team integration"
+    ]
   }
 ];
 
 export default function ServicesPage() {
+  const rotatingItems = [
+    "AI Consulting",
+    "Data Analytics & Governance",
+    "Data Validation",
+    "Management Services",
+    "Technology Solutions",
+    "Staff Augmentation"
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
-      <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-stone-900 text-white">
+      <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-stone-900 text-white border-b border-stone-800">
         <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center">
           <ScrollReveal>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Our Services</h1>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              Expertise in <br className="md:hidden" />
+              <TextRotator items={rotatingItems} className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-400" />
+            </h1>
             <p className="text-xl text-stone-300 leading-relaxed">
               Practical consulting and technology services designed to help businesses optimize operations, leverage data, and adopt artificial intelligence effectively.
             </p>

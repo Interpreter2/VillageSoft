@@ -1,6 +1,7 @@
 import { SectionHeader } from "@/components/ui/section-header";
 import { CheckCircle2 } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { TextRotator } from "@/components/ui/text-rotator";
 
 export const metadata = {
   title: "About",
@@ -8,13 +9,23 @@ export const metadata = {
 };
 
 export default function AboutPage() {
+  const rotatingIdentities = [
+    "Technology Experts",
+    "Management Consultants",
+    "Professional Trainers",
+    "Strategic Partners"
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero / Who We Are */}
       <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-stone-900 text-white">
         <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center">
           <ScrollReveal>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Who We Are</h1>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              We Are <br className="md:hidden" />
+              <TextRotator items={rotatingIdentities} className="text-amber-500" />
+            </h1>
             <p className="text-xl text-stone-300 leading-relaxed">
               VillageSoft is a technology, consulting, management, and training company. We are driven by the belief that organizations thrive when technology is applied effectively, and individuals succeed when equipped with practical, real-world skills.
             </p>

@@ -2,6 +2,7 @@ import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { TextRotator } from "@/components/ui/text-rotator";
 
 export const metadata = {
   title: "Contact",
@@ -9,13 +10,22 @@ export const metadata = {
 };
 
 export default function ContactPage() {
+  const rotatingTopics = [
+    "Your Needs.",
+    "Consulting.",
+    "Technology.",
+    "Training.",
+    "Partnerships."
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
       <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-stone-900 text-white border-b border-stone-800">
         <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center">
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              Let&apos;s Start a Conversation.
+              Let&apos;s Talk About <br className="md:hidden" />
+              <TextRotator items={rotatingTopics} className="text-amber-500" />
             </h1>
             <p className="text-xl text-stone-300 leading-relaxed">
               Contact VillageSoft regarding consulting, technology services, professional training, partnerships, or general enquiries.

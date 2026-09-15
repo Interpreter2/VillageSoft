@@ -5,42 +5,48 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { FeatureCard } from "@/components/ui/feature-card";
 import { MosaicBackground } from "@/components/ui/mosaic-background";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { TextRotator } from "@/components/ui/text-rotator";
+
 export default function Home() {
+  const rotatingServices = [
+    "AI Consulting",
+    "Data Analytics",
+    "Data Governance",
+    "Staff Augmentation",
+    "Corporate Training"
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-40 md:pt-48 md:pb-48 overflow-hidden bg-stone-900">
-        {/* Premium Background Elements */}
+      <section className="relative pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-stone-900 border-b border-stone-800">
         <MosaicBackground />
-        <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[800px] h-[600px] bg-amber-900/20 rounded-full blur-[100px] opacity-50 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[600px] h-[600px] bg-orange-900/20 rounded-full blur-[100px] opacity-50 pointer-events-none" />
         
-        <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center rounded-full border border-stone-700 bg-stone-800/50 px-3 py-1 text-sm font-medium text-amber-400 mb-8 shadow-sm">
-            <span className="flex h-2 w-2 rounded-full bg-amber-500 mr-2"></span>
-            Elevating Technology & Talent
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-white max-w-5xl mx-auto leading-[1.1]">
-            Building Skills. <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-400">Enabling Businesses.</span> <br className="hidden md:block" />
-            Creating Real-World Impact.
-          </h1>
-          <p className="mt-8 text-xl text-stone-300 max-w-2xl mx-auto leading-relaxed">
-            VillageSoft helps businesses navigate technology, AI, and data while equipping individuals with practical, industry-ready skills for today&apos;s workplace.
-          </p>
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="h-12 px-8 text-base shadow-lg shadow-amber-900/20 transition-all hover:-translate-y-0.5" asChild>
-              <Link href="/services">
-                Explore Our Services <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="h-12 px-8 text-base bg-stone-800/50 border-stone-600 text-slate-200 hover:bg-stone-700 hover:text-white transition-all hover:-translate-y-0.5" asChild>
-              <Link href="/training">
-                Explore Training
-              </Link>
-            </Button>
-          </div>
+        <div className="container relative z-10 mx-auto px-4 md:px-8 text-center max-w-5xl">
+          <ScrollReveal>
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-white max-w-5xl mx-auto leading-[1.1]">
+              Building Skills. <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-400">
+                <TextRotator items={rotatingServices} />
+              </span> <br className="hidden md:block" />
+              Creating Real-World Impact.
+            </h1>
+            <p className="mt-8 text-xl text-stone-300 max-w-2xl mx-auto leading-relaxed">
+              VillageSoft helps businesses navigate technology, AI, and data while equipping individuals with practical, industry-ready skills for today&apos;s workplace.
+            </p>
+            <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button size="lg" className="h-12 px-8 text-base shadow-lg shadow-amber-900/20 transition-all hover:-translate-y-0.5" asChild>
+                <Link href="/services">
+                  Explore Our Services <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="h-12 px-8 text-base bg-stone-800/50 border-stone-600 text-slate-200 hover:bg-stone-700 hover:text-white transition-all hover:-translate-y-0.5" asChild>
+                <Link href="/training">
+                  Explore Training
+                </Link>
+              </Button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -68,10 +74,11 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "AI & Technology Consulting", desc: "Strategic guidance to understand and apply modern technology and artificial intelligence effectively.", icon: Brain, href: "/services" },
-              { title: "Data Analytics", desc: "Transform raw data into actionable insights for smarter, data-driven decision making.", icon: ChartBar, href: "/services" },
+              { title: "Data Analytics & Governance", desc: "Transform your raw data into clear, actionable insights while ensuring it is secure and compliant.", icon: ChartBar, href: "/services" },
               { title: "Data Validation", desc: "Ensure data quality, accuracy, and consistency across your organization's workflows.", icon: FileCheck, href: "/services" },
               { title: "Management Services", desc: "Expert project coordination and process improvement to guarantee successful implementations.", icon: Users, href: "/services" },
               { title: "Technology Solutions", desc: "Custom software solutions, automation, and reliable data-driven applications.", icon: Laptop, href: "/services" },
+              { title: "Staff Augmentation", desc: "Scale your capabilities rapidly with our highly trained, industry-ready technical talent.", icon: Users, href: "/services" },
               { title: "Professional Training", desc: "Rigorous, practical training programs preparing talent for modern corporate environments.", icon: GraduationCap, href: "/training" }
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 50}>

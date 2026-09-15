@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Briefcase, Code, Database, LineChart } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { TextRotator } from "@/components/ui/text-rotator";
 
 export const metadata = {
   title: "Professional Training",
@@ -10,13 +11,22 @@ export const metadata = {
 };
 
 export default function TrainingPage() {
+  const rotatingGoals = [
+    "Industry Ready.",
+    "A Software Engineer.",
+    "A Data Analyst.",
+    "A Project Manager.",
+    "A Tech Leader."
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
       <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-stone-900 text-white border-b border-stone-800">
         <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center">
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              Learn Skills. Build Projects. <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-400">Become Industry Ready.</span>
+              Learn Skills. Build Projects. <br className="md:hidden" />
+              Become <TextRotator items={rotatingGoals} className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-400" />
             </h1>
             <p className="text-xl text-stone-300 leading-relaxed">
               Our training programs focus on practical, career-oriented skills. We don&apos;t just teach theory; we prepare you to apply concepts to real-world business challenges.

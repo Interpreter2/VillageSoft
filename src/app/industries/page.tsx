@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Building2, Rocket } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { TextRotator } from "@/components/ui/text-rotator";
 
 export const metadata = {
   title: "Industries",
@@ -9,12 +10,22 @@ export const metadata = {
 };
 
 export default function IndustriesPage() {
+  const rotatingIndustries = [
+    "IT Services",
+    "Startups",
+    "Scale-ups",
+    "Enterprise"
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
       <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-stone-900 text-white border-b border-stone-800">
         <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center">
           <ScrollReveal>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Industries We Serve</h1>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              Solutions For <br className="md:hidden" />
+              <TextRotator items={rotatingIndustries} className="text-amber-500" />
+            </h1>
             <p className="text-xl text-stone-300 leading-relaxed">
               We bring our expertise in technology, AI, and talent development to address the unique challenges of modern, dynamic sectors.
             </p>
