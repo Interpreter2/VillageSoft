@@ -165,7 +165,8 @@ export default function TrainingPage() {
          <div className="container mx-auto px-4 max-w-3xl">
             <ScrollReveal>
                <h2 className="text-3xl font-bold text-stone-900 mb-6">Start Your Transformation</h2>
-               <p className="text-lg text-stone-600 mb-8">Ready to bridge the gap between academic knowledge and workplace performance?</p>
+               <p className="text-lg text-stone-600 mb-4">Ready to bridge the gap between academic knowledge and workplace performance?</p>
+               <p className="text-lg text-amber-700 font-medium mb-8">Whether you are starting fresh or looking for a second chance to reboot your career, VillageSoft Academy provides the skills, context, and discipline needed to succeed.</p>
                <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white" asChild>
                   <Link href="/contact">Apply to VillageSoft Academy</Link>
                </Button>

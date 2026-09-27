@@ -12,7 +12,6 @@ export const metadata = {
 
 export default function AboutPage() {
   const rotatingIdentities = [
-    "Transformation.",
     "Technology.",
     "Talent.",
     "Impact."
@@ -150,6 +149,16 @@ export default function AboutPage() {
               <p className="text-xl font-medium text-amber-700">
                 Our ambition is to connect untapped potential with enterprise demand—transforming local potential into global capability.
               </p>
+              
+              <div className="mt-12 pt-12 border-t border-stone-200">
+                <h2 className="text-3xl font-bold text-stone-900 mb-6">A Second Chance at Success</h2>
+                <p className="text-xl text-stone-600 leading-relaxed mb-6">
+                  We strongly believe that a career break, a non-traditional background, or past setbacks shouldn't define your future. True talent is measured by resilience, execution, and the willingness to learn.
+                </p>
+                <p className="text-xl font-medium text-amber-700">
+                  Through VillageSoft Academy, we are committed to providing a second chance—equipping driven individuals with the modern skills, corporate context, and execution discipline needed to reboot their careers and thrive.
+                </p>
+              </div>
             </div>
           </ScrollReveal>
           

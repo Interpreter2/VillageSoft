@@ -68,7 +68,7 @@ export default function Home() {
           <ScrollReveal delay={300}>
             <div className="mt-20 p-8 bg-stone-900 text-stone-100 rounded-2xl max-w-4xl mx-auto text-center border border-stone-800 shadow-xl">
               <p className="text-lg leading-relaxed">
-                The model anchors VillageSoft&apos;s portfolio: Data & Analytics creates <span className="text-amber-400 font-semibold">Insights</span>; AI enables <span className="text-amber-400 font-semibold">Leverage</span>; Talent Transformation drives <span className="text-amber-400 font-semibold">Learn</span>; AI Validation provides <span className="text-amber-400 font-semibold">Assurance</span>; governance enables responsible scale; and execution converts strategy into measurable outcomes.
+                The model anchors VillageSoft&apos;s <span className="text-amber-400 font-semibold">Vision</span>: Data & Analytics creates <span className="text-amber-400 font-semibold">Insights</span>; AI enables <span className="text-amber-400 font-semibold">Leverage</span>; Talent Transformation drives <span className="text-amber-400 font-semibold">Learn</span>; AI Validation provides <span className="text-amber-400 font-semibold">Assurance</span>;  <span className="text-amber-400 font-semibold">Governance</span> enables responsible scale; and  <span className="text-amber-400 font-semibold">Execution</span> converts strategy into measurable outcomes.
               </p>
             </div>
           </ScrollReveal>
