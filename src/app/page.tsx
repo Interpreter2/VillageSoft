@@ -1,19 +1,16 @@
 import Link from "next/link";
-import { ArrowRight, Brain, ChartBar, CheckCircle2, FileCheck, GraduationCap, Laptop, Lightbulb, Users } from "lucide-react";
+import { ArrowRight, Brain, ChartBar, CheckCircle2, FileCheck, GraduationCap, Laptop, Lightbulb, Users, Target, Search, Settings, ShieldCheck, Scale, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/ui/section-header";
-import { FeatureCard } from "@/components/ui/feature-card";
 import { MosaicBackground } from "@/components/ui/mosaic-background";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { TextRotator } from "@/components/ui/text-rotator";
 
 export default function Home() {
-  const rotatingServices = [
-    "AI Consulting",
-    "Data Analytics",
-    "Data Governance",
-    "Staff Augmentation",
-    "Corporate Training"
+  const rotatingImpact = [
+    "Data into Decisions.",
+    "AI into Business Impact.",
+    "Talent into Performance."
   ];
 
   return (
@@ -24,15 +21,20 @@ export default function Home() {
         
         <div className="container relative z-10 mx-auto px-4 md:px-8 text-center max-w-5xl">
           <ScrollReveal>
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-white max-w-5xl mx-auto leading-[1.1]">
-              Building Skills. <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-400">
-                <TextRotator items={rotatingServices} />
-              </span> <br className="hidden md:block" />
-              Creating Real-World Impact.
+            <div className="inline-flex items-center rounded-full border border-stone-700 bg-stone-800/50 px-3 py-1 text-sm font-medium text-amber-400 mb-8 shadow-sm">
+              <span className="flex h-2 w-2 rounded-full bg-amber-500 mr-2"></span>
+              TECHNOLOGY. TALENT. TRANSFORMATION.
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-white max-w-5xl mx-auto leading-[1.1] h-[160px] md:h-[220px] flex flex-col justify-center">
+              <span>Transforming Businesses. <br className="hidden md:block" /> Transforming Talent.</span>
+              <span className="mt-4 text-3xl md:text-5xl text-stone-300 font-medium">
+                Turning <TextRotator items={rotatingImpact} className="text-amber-500 font-bold" />
+              </span>
             </h1>
-            <p className="mt-8 text-xl text-stone-300 max-w-2xl mx-auto leading-relaxed">
-              VillageSoft helps businesses navigate technology, AI, and data while equipping individuals with practical, industry-ready skills for today&apos;s workplace.
+            
+            <p className="mt-8 text-lg md:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed">
+              VillageSoft is a technology and talent transformation company helping enterprises turn Data into Decisions, AI into Business Impact, and Talent into Performance. We combine business understanding, technology expertise and execution excellence to deliver meaningful and measurable transformation.
             </p>
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="h-12 px-8 text-base shadow-lg shadow-amber-900/20 transition-all hover:-translate-y-0.5" asChild>
@@ -42,7 +44,7 @@ export default function Home() {
               </Button>
               <Button size="lg" variant="outline" className="h-12 px-8 text-base bg-stone-800/50 border-stone-600 text-slate-200 hover:bg-stone-700 hover:text-white transition-all hover:-translate-y-0.5" asChild>
                 <Link href="/training">
-                  Explore Training
+                  Explore VillageSoft Academy
                 </Link>
               </Button>
             </div>
@@ -50,179 +52,174 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="py-24 bg-stone-100 border-t border-stone-200">
-        <div className="container mx-auto px-4 md:px-8 text-center max-w-4xl">
-        <ScrollReveal>
-          <h2 className="text-3xl font-bold mb-6">Empowering the Future of Work</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            We bridge the gap between technological potential and practical execution. For businesses, we provide consulting and technology services that drive efficiency and growth. For individuals, we offer rigorous, career-focused training that builds industry-ready professionals.
-          </p>
-        </ScrollReveal>
+      {/* VILLAGE Model */}
+      <section className="py-24 bg-stone-100 border-t border-stone-200 overflow-hidden">
+        <div className="container mx-auto px-4 md:px-8">
+          <ScrollReveal>
+            <div className="mb-16 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">The VILLAGE Transformation Model™</h2>
+              <p className="text-lg text-stone-600 max-w-3xl mx-auto">From Vision to Execution. Our proprietary VILLAGE Transformation Model™ brings together business, technology, talent, assurance, governance and execution into one integrated framework for transformation.</p>
+            </div>
+          </ScrollReveal>
+
+          <div className="relative max-w-5xl mx-auto">
+            {/* Connecting line */}
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-stone-300 md:-translate-x-1/2 hidden md:block" />
+            
+            <div className="space-y-6 md:space-y-0">
+              {[
+                { letter: "V", title: "VISION", focus: "Define the ambition.", desc: "Align transformation with business priorities, customer needs and measurable outcomes.", icon: Target },
+                { letter: "I", title: "INSIGHTS", focus: "Turn information into intelligence.", desc: "Use data, analytics and business understanding to identify opportunities and improve decisions.", icon: Search },
+                { letter: "L", title: "LEVERAGE", focus: "Harness technology for advantage.", desc: "Apply AI, data and emerging technologies to improve productivity, experience, efficiency and growth.", icon: Zap },
+                { letter: "L", title: "LEARN", focus: "Build future-ready capabilities.", desc: "Continuously develop people, skills and organizational capabilities to adapt and transform.", icon: GraduationCap },
+                { letter: "A", title: "ASSURE", focus: "Build trust into transformation.", desc: "Validate AI, data and solutions for reliability, security, responsibility and business effectiveness.", icon: ShieldCheck },
+                { letter: "G", title: "GOVERN", focus: "Transform with accountability.", desc: "Establish governance, controls, measurement and oversight to scale transformation responsibly.", icon: Scale },
+                { letter: "E", title: "EXECUTE", focus: "Turn strategy into outcomes.", desc: "Drive disciplined execution, ownership and continuous improvement to deliver measurable results.", icon: CheckCircle2 }
+              ].map((step, idx) => (
+                <ScrollReveal key={idx} delay={idx * 50}>
+                  <div className={`relative flex flex-col md:flex-row items-center gap-6 md:gap-12 ${idx % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+                    
+                    {/* Timeline Node */}
+                    <div className="absolute left-8 md:left-1/2 w-12 h-12 bg-white border-4 border-stone-200 rounded-full md:-translate-x-1/2 flex items-center justify-center text-xl font-bold text-amber-600 z-10 shadow-sm hidden md:flex">
+                      {step.letter}
+                    </div>
+
+                    <div className="w-full md:w-1/2 p-6 md:p-8 bg-white rounded-2xl shadow-sm border border-stone-200 relative">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 shrink-0 bg-stone-100 rounded-xl flex items-center justify-center text-stone-600 border border-stone-200">
+                          <step.icon className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-3 mb-2">
+                            <span className="text-2xl font-bold text-stone-900 md:hidden">{step.letter}</span>
+                            <h3 className="text-xl font-bold text-stone-900">{step.title}</h3>
+                          </div>
+                          <p className="text-amber-700 font-medium mb-3">{step.focus}</p>
+                          <p className="text-stone-600 leading-relaxed text-sm md:text-base">{step.desc}</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="hidden md:block w-1/2"></div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+          
+          <ScrollReveal delay={300}>
+            <div className="mt-20 p-8 bg-stone-900 text-stone-100 rounded-2xl max-w-4xl mx-auto text-center border border-stone-800 shadow-xl">
+              <p className="text-lg leading-relaxed">
+                The model anchors VillageSoft&apos;s portfolio: Data & Analytics creates <span className="text-amber-400 font-semibold">Insights</span>; AI enables <span className="text-amber-400 font-semibold">Leverage</span>; Talent Transformation drives <span className="text-amber-400 font-semibold">Learn</span>; AI Validation provides <span className="text-amber-400 font-semibold">Assurance</span>; governance enables responsible scale; and execution converts strategy into measurable outcomes.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* Capabilities */}
+      {/* Core Services Summary */}
       <section className="py-24 bg-stone-800 text-stone-50 border-t border-stone-700">
         <div className="container mx-auto px-4 md:px-8">
           <ScrollReveal>
-            <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold tracking-tight mb-4">Our Capabilities</h2>
-              <p className="text-lg text-stone-400 max-w-2xl mx-auto">Comprehensive technology and management solutions designed to solve real business challenges.</p>
+            <div className="mb-16 text-center">
+              <h2 className="text-3xl font-bold tracking-tight mb-4">Our Transformation Services</h2>
+              <p className="text-lg text-stone-400 max-w-2xl mx-auto">From identifying opportunities to assuring AI and developing human capabilities.</p>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: "AI & Technology Consulting", desc: "Strategic guidance to understand and apply modern technology and artificial intelligence effectively.", icon: Brain, href: "/services" },
-              { title: "Data Analytics & Governance", desc: "Transform your raw data into clear, actionable insights while ensuring it is secure and compliant.", icon: ChartBar, href: "/services" },
-              { title: "Data Validation", desc: "Ensure data quality, accuracy, and consistency across your organization's workflows.", icon: FileCheck, href: "/services" },
-              { title: "Management Services", desc: "Expert project coordination and process improvement to guarantee successful implementations.", icon: Users, href: "/services" },
-              { title: "Technology Solutions", desc: "Custom software solutions, automation, and reliable data-driven applications.", icon: Laptop, href: "/services" },
-              { title: "Staff Augmentation", desc: "Scale your capabilities rapidly with our highly trained, industry-ready technical talent.", icon: Users, href: "/services" },
-              { title: "Professional Training", desc: "Rigorous, practical training programs preparing talent for modern corporate environments.", icon: GraduationCap, href: "/training" }
-            ].map((item, i) => (
-              <ScrollReveal key={i} delay={i * 50}>
-                <div className="flex flex-col h-full bg-stone-700 border border-stone-600 rounded-2xl p-6 shadow-sm">
-                  <div className="w-12 h-12 bg-amber-900/50 text-amber-400 rounded-xl flex items-center justify-center mb-6">
-                    <item.icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                  <p className="text-stone-400 mb-6 flex-1">{item.desc}</p>
-                  <Link href={item.href} className="text-amber-400 font-medium inline-flex items-center hover:text-amber-300 transition-colors">
-                    Learn more <ArrowRight className="ml-1 w-4 h-4" />
-                  </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <ScrollReveal delay={0}>
+              <div className="flex flex-col h-full bg-stone-700 border border-stone-600 rounded-2xl p-8 shadow-sm">
+                <div className="w-14 h-14 bg-amber-900/50 text-amber-400 rounded-xl flex items-center justify-center mb-6">
+                  <ChartBar className="h-7 w-7" />
                 </div>
-              </ScrollReveal>
-            ))}
+                <h3 className="text-2xl font-bold mb-3">Data & Analytics</h3>
+                <h4 className="text-amber-400 font-medium mb-4">From Data to Decisions</h4>
+                <p className="text-stone-300 flex-1 leading-relaxed mb-6">
+                  Build trusted, connected and actionable data environments that support operational performance, management visibility and growth.
+                </p>
+                <Link href="/services#data-analytics" className="text-white font-medium inline-flex items-center hover:text-amber-400 transition-colors">
+                  Explore Data Services <ArrowRight className="ml-1 w-4 h-4" />
+                </Link>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={100}>
+              <div className="flex flex-col h-full bg-stone-700 border border-stone-600 rounded-2xl p-8 shadow-sm">
+                <div className="w-14 h-14 bg-amber-900/50 text-amber-400 rounded-xl flex items-center justify-center mb-6">
+                  <Brain className="h-7 w-7" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Artificial Intelligence</h3>
+                <h4 className="text-amber-400 font-medium mb-4">From Possibilities to Impact</h4>
+                <p className="text-stone-300 flex-1 leading-relaxed mb-6">
+                  Move from AI experimentation to practical business adoption by designing solutions integrated into real workflows.
+                </p>
+                <Link href="/services#artificial-intelligence" className="text-white font-medium inline-flex items-center hover:text-amber-400 transition-colors">
+                  Explore AI Services <ArrowRight className="ml-1 w-4 h-4" />
+                </Link>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={200}>
+              <div className="flex flex-col h-full bg-stone-700 border border-stone-600 rounded-2xl p-8 shadow-sm">
+                <div className="w-14 h-14 bg-amber-900/50 text-amber-400 rounded-xl flex items-center justify-center mb-6">
+                  <ShieldCheck className="h-7 w-7" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3">AI Validation & Assurance</h3>
+                <h4 className="text-amber-400 font-medium mb-4">From Innovation to Trust</h4>
+                <p className="text-stone-300 flex-1 leading-relaxed mb-6">
+                  Assess whether AI solutions are reliable, secure, responsible, consistent and aligned with intended business outcomes.
+                </p>
+                <Link href="/services#ai-validation" className="text-white font-medium inline-flex items-center hover:text-amber-400 transition-colors">
+                  Explore Assurance <ArrowRight className="ml-1 w-4 h-4" />
+                </Link>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* Training / Career Readiness */}
+      {/* Talent Transformation Summary */}
       <section className="py-24 bg-stone-100 border-t border-stone-200">
         <div className="container mx-auto px-4 md:px-8">
           <ScrollReveal>
-            <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="flex flex-col lg:flex-row gap-16 items-center">
               <div className="flex-1 space-y-6">
-                <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-amber-100 text-amber-900">
-                  Corporate Training
+                <div className="inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold border-transparent bg-amber-100 text-amber-900">
+                  VillageSoft Academy
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Built for the Real World</h2>
-                <p className="text-lg text-muted-foreground">
-                  Our training programs go beyond theoretical concepts. We focus on practical, industry-relevant skills and real-world projects that prepare you for immediate workplace readiness.
+                <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Talent Transformation</h2>
+                <h3 className="text-xl text-stone-600 font-medium">From College to Corporate. From Knowledge to Performance.</h3>
+                <p className="text-lg text-stone-700 leading-relaxed">
+                  The gap between academic learning and corporate performance is rarely about knowledge alone. Employers need professionals who can communicate, understand business context, apply technology, work in teams, take ownership and deliver.
                 </p>
-                <ul className="space-y-3">
-                  {[
-                    "Industry-relevant technical skills",
-                    "Hands-on real-world projects",
-                    "Professional and workplace readiness",
-                    "Data, AI, and software engineering foundations"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center text-foreground">
-                      <CheckCircle2 className="h-5 w-5 text-primary mr-3 shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
                 <div className="pt-4">
-                  <Button asChild>
-                    <Link href="/training">Explore Training Programs</Link>
+                  <Button size="lg" asChild>
+                    <Link href="/training">Discover The 3-Skill Model</Link>
                   </Button>
                 </div>
               </div>
-              <div className="flex-1 w-full bg-card rounded-2xl shadow-sm border p-8">
-                <div className="aspect-video bg-secondary rounded-lg flex items-center justify-center text-muted-foreground border border-dashed border-stone-300">
-                  [Placeholder for Training Interface/Image]
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Business Consulting */}
-      <section className="py-24 bg-stone-800 text-stone-50 border-t border-stone-700">
-        <div className="container mx-auto px-4 md:px-8 text-center max-w-3xl">
-          <ScrollReveal>
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold tracking-tight mb-4">Accelerate Your Business</h2>
-              <p className="text-lg text-stone-400 max-w-2xl mx-auto">We help startups and small to medium-sized businesses adopt technology, leverage data, and streamline management processes to drive tangible growth.</p>
-            </div>
-            <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white" asChild>
-              <Link href="/contact">Talk to Us</Link>
-            </Button>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Industries */}
-      <section className="py-24 bg-stone-100 border-t border-stone-200">
-        <div className="container mx-auto px-4 md:px-8">
-          <ScrollReveal>
-            <SectionHeader 
-              title="Industries We Serve" 
-              subtitle="Applying specialized technology and management expertise to distinct industry challenges." 
-            />
-          </ScrollReveal>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
-            <ScrollReveal delay={0}>
-              <div className="bg-white p-8 rounded-xl border border-stone-200 h-full shadow-sm">
-                <h3 className="text-2xl font-semibold mb-4 text-stone-900">IT Services</h3>
-                <p className="text-stone-600 leading-relaxed">
-                  Supporting technology-focused organizations with AI adoption, advanced data analytics, robust technology solutions, and talent development.
-                </p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <div className="bg-white p-8 rounded-xl border border-stone-200 h-full shadow-sm">
-                <h3 className="text-2xl font-semibold mb-4 text-stone-900">Startups</h3>
-                <p className="text-stone-600 leading-relaxed">
-                  Helping early and growth-stage companies with scalable technology strategy, process improvement, data infrastructure, and building capable teams.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Why VillageSoft */}
-      <section className="py-24 bg-stone-800 text-stone-50 border-t border-stone-700">
-        <div className="container mx-auto px-4 md:px-8">
-          <ScrollReveal>
-            <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold tracking-tight mb-4">Why VillageSoft</h2>
-            </div>
-          </ScrollReveal>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { title: "Practical Approach", desc: "We prioritize solutions and skills that can be applied immediately to generate real value." },
-              { title: "Technology Driven", desc: "Deep expertise in leveraging modern tools, AI, and data to solve complex problems." },
-              { title: "Industry-Relevant", desc: "Our frameworks and training curricula are designed directly from current workplace demands." },
-              { title: "Business-Focused", desc: "Every technological implementation is aligned with clear business objectives and ROI." }
-            ].map((item, i) => (
-              <ScrollReveal key={i} delay={i * 100}>
-                <div className="flex flex-col items-center text-center p-6 bg-stone-700 rounded-xl border border-stone-600 h-full shadow-sm">
-                  <div className="w-12 h-12 bg-amber-900/50 text-amber-400 rounded-full flex items-center justify-center mb-4">
-                    <Lightbulb className="w-6 h-6" />
+              <div className="flex-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {["Soft Skills", "Hard Skills", "Execution Skills", "Industry Ready"].map((skill, i) => (
+                  <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center font-bold text-stone-900 flex flex-col items-center justify-center gap-3">
+                    <CheckCircle2 className="w-8 h-8 text-amber-600" />
+                    {skill}
                   </div>
-                  <h3 className="font-semibold text-lg mb-2 text-stone-50">{item.title}</h3>
-                  <p className="text-sm text-stone-400">{item.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-32 bg-stone-100 text-stone-900 text-center border-t border-stone-200">
-        <div className="container mx-auto px-4 md:px-8 max-w-3xl">
+      <section className="py-32 bg-stone-900 text-white text-center border-t border-stone-800">
+        <div className="container mx-auto px-4 md:px-8 max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Let&apos;s Build What&apos;s Next.</h2>
-            <p className="text-xl text-stone-600 mb-10 leading-relaxed">
-              Whether you&apos;re looking to strengthen your business operations or develop the skills needed for the modern workplace, VillageSoft can help.
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Let&apos;s Transform Together.</h2>
+            <p className="text-xl text-stone-300 mb-10 leading-relaxed">
+              Whether you are an enterprise looking to unlock value from Data and AI, or an educational institution looking to improve student employability, VillageSoft can be your transformation partner.
             </p>
-            <Button size="lg" className="px-8 bg-amber-700 hover:bg-amber-800 text-white" asChild>
+            <Button size="lg" className="px-8 bg-amber-600 hover:bg-amber-700 text-white" asChild>
               <Link href="/contact">Get Started</Link>
             </Button>
           </ScrollReveal>

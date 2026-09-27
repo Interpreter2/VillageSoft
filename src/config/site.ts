@@ -14,35 +14,25 @@ export const siteConfig = {
     { title: "Home", href: "/" },
     { title: "About", href: "/about" },
     { title: "Services", href: "/services" },
-    { title: "Training", href: "/training" },
-    { title: "Industries", href: "/industries" },
+    { title: "Academy", href: "/training" },
+    { title: "Who We Serve", href: "/industries" },
     { title: "Contact", href: "/contact" },
   ],
   services: [
     {
-      title: "AI & Technology Consulting",
-      description: "Understand and apply modern technology and AI to practical business problems.",
-      href: "/services#ai-consulting",
-    },
-    {
-      title: "Data Analytics",
-      description: "Data-driven decision making, reporting, and business insights.",
+      title: "Data & Analytics",
+      description: "From Data to Decisions. Build trusted, connected, and actionable data environments.",
       href: "/services#data-analytics",
     },
     {
-      title: "Data Validation",
-      description: "Ensure data quality, accuracy, consistency, and reliable workflows.",
-      href: "/services#data-validation",
+      title: "Artificial Intelligence",
+      description: "From Possibilities to Impact. Practical business adoption of AI solutions.",
+      href: "/services#artificial-intelligence",
     },
     {
-      title: "Management Services",
-      description: "Project coordination, process improvement, and implementation support.",
-      href: "/services#management-services",
-    },
-    {
-      title: "Technology Solutions",
-      description: "Custom software solutions, automation, and data-driven applications.",
-      href: "/services#technology-solutions",
-    },
+      title: "AI Validation & Assurance",
+      description: "From Innovation to Trust. Reliable, secure, and responsible enterprise AI.",
+      href: "/services#ai-validation",
+    }
   ],
 };

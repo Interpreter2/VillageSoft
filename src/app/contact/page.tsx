@@ -2,33 +2,22 @@ import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { TextRotator } from "@/components/ui/text-rotator";
-
 export const metadata = {
   title: "Contact",
   description: "Get in touch with VillageSoft.",
 };
 
 export default function ContactPage() {
-  const rotatingTopics = [
-    "Your Needs.",
-    "Consulting.",
-    "Technology.",
-    "Training.",
-    "Partnerships."
-  ];
-
   return (
     <div className="flex flex-col min-h-screen">
       <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-stone-900 text-white border-b border-stone-800">
         <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center">
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              Let&apos;s Talk About <br className="md:hidden" />
-              <TextRotator items={rotatingTopics} className="text-amber-500" />
+              Let&apos;s Transform Together.
             </h1>
-            <p className="text-xl text-stone-300 leading-relaxed">
-              Contact VillageSoft regarding consulting, technology services, professional training, partnerships, or general enquiries.
+            <p className="text-xl text-stone-300 leading-relaxed max-w-3xl mx-auto">
+              Whether you are an enterprise unlocking value from Data and AI, an organization building trusted AI, an educational institution improving student employability, or an aspiring professional preparing for a technology career, VillageSoft can be your transformation partner.
             </p>
           </ScrollReveal>
         </div>
