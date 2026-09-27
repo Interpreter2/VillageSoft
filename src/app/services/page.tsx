@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Brain, ChartBar, ShieldCheck, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Brain, ChartBar, ShieldCheck, ArrowRight, CheckCircle2, Users } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { TextRotator } from "@/components/ui/text-rotator";
 
@@ -57,6 +57,22 @@ const serviceDetails = [
       "Responsible AI & Business Outcome Validation"
     ],
     outcome: "Trusted AI. Responsible AI. Enterprise-Ready AI."
+  },
+  {
+    id: "talent-transformation",
+    title: "Talent Transformation",
+    subtitle: "From Knowledge to Performance",
+    description: "Transformation requires people who can execute. VillageSoft bridges the gap between academic learning and corporate performance, equipping professionals with the hard skills, corporate context, and execution discipline required to thrive.",
+    icon: <Users className="h-8 w-8" />,
+    capabilities: [
+      "Corporate Readiness & Soft Skills",
+      "Technology & Data Analytics Training",
+      "AI & Tool Validation Workshops",
+      "Project-Based Execution Simulators",
+      "Enterprise Capability Building",
+      "Staff Augmentation & Talent Deployment"
+    ],
+    outcome: "Future-ready teams capable of disciplined execution and sustained innovation."
   }
 ];
 
@@ -64,7 +80,8 @@ export default function ServicesPage() {
   const rotatingItems = [
     "Data & Analytics.",
     "Artificial Intelligence.",
-    "AI Validation & Assurance."
+    "AI Validation & Assurance.",
+    "Talent Transformation."
   ];
 
   return (
@@ -142,6 +159,9 @@ export default function ServicesPage() {
                           )}
                           {service.id === "ai-validation" && (
                             <div className="font-mono text-sm text-stone-500 font-semibold tracking-wider">Validate Data &rarr; Model &rarr; Workflow &rarr; Outcome</div>
+                          )}
+                          {service.id === "talent-transformation" && (
+                            <div className="font-mono text-sm text-stone-500 font-semibold tracking-wider">Knowledge &rarr; Execution &rarr; Performance</div>
                           )}
                        </div>
                     </div>

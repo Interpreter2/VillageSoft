@@ -33,6 +33,11 @@ export const siteConfig = {
       title: "AI Validation & Assurance",
       description: "From Innovation to Trust. Reliable, secure, and responsible enterprise AI.",
       href: "/services#ai-validation",
+    },
+    {
+      title: "Talent Transformation",
+      description: "From Knowledge to Performance. Equipping professionals with execution discipline.",
+      href: "/services#talent-transformation",
     }
   ],
 };
