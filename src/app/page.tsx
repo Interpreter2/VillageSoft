@@ -5,11 +5,12 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { MosaicBackground } from "@/components/ui/mosaic-background";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { TextRotator } from "@/components/ui/text-rotator";
+import { VillageModelInteractive } from "@/components/ui/village-model";
 
 export default function Home() {
   const rotatingImpact = [
-    "Data into Decisions.",
     "AI into Business Impact.",
+    "Data into Decisions.",
     "Talent into Performance."
   ];
 
@@ -34,7 +35,7 @@ export default function Home() {
             </h1>
             
             <p className="mt-8 text-lg md:text-xl text-stone-300 max-w-3xl mx-auto leading-relaxed">
-              VillageSoft is a technology and talent transformation company helping enterprises turn Data into Decisions, AI into Business Impact, and Talent into Performance. We combine business understanding, technology expertise and execution excellence to deliver meaningful and measurable transformation.
+              VillageSoft is a business, technology and talent transformation company helping enterprises turn AI into Business Impact,  Data into Decisions, and Talent into Performance. We combine business understanding, technology expertise and execution excellence to deliver meaningful and measurable transformation.
             </p>
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="h-12 px-8 text-base shadow-lg shadow-amber-900/20 transition-all hover:-translate-y-0.5" asChild>
@@ -62,50 +63,7 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="relative max-w-5xl mx-auto">
-            {/* Connecting line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-stone-300 md:-translate-x-1/2 hidden md:block" />
-            
-            <div className="space-y-6 md:space-y-0">
-              {[
-                { letter: "V", title: "VISION", focus: "Define the ambition.", desc: "Align transformation with business priorities, customer needs and measurable outcomes.", icon: Target },
-                { letter: "I", title: "INSIGHTS", focus: "Turn information into intelligence.", desc: "Use data, analytics and business understanding to identify opportunities and improve decisions.", icon: Search },
-                { letter: "L", title: "LEVERAGE", focus: "Harness technology for advantage.", desc: "Apply AI, data and emerging technologies to improve productivity, experience, efficiency and growth.", icon: Zap },
-                { letter: "L", title: "LEARN", focus: "Build future-ready capabilities.", desc: "Continuously develop people, skills and organizational capabilities to adapt and transform.", icon: GraduationCap },
-                { letter: "A", title: "ASSURE", focus: "Build trust into transformation.", desc: "Validate AI, data and solutions for reliability, security, responsibility and business effectiveness.", icon: ShieldCheck },
-                { letter: "G", title: "GOVERN", focus: "Transform with accountability.", desc: "Establish governance, controls, measurement and oversight to scale transformation responsibly.", icon: Scale },
-                { letter: "E", title: "EXECUTE", focus: "Turn strategy into outcomes.", desc: "Drive disciplined execution, ownership and continuous improvement to deliver measurable results.", icon: CheckCircle2 }
-              ].map((step, idx) => (
-                <ScrollReveal key={idx} delay={idx * 50}>
-                  <div className={`relative flex flex-col md:flex-row items-center gap-6 md:gap-12 ${idx % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
-                    
-                    {/* Timeline Node */}
-                    <div className="absolute left-8 md:left-1/2 w-12 h-12 bg-white border-4 border-stone-200 rounded-full md:-translate-x-1/2 flex items-center justify-center text-xl font-bold text-amber-600 z-10 shadow-sm hidden md:flex">
-                      {step.letter}
-                    </div>
-
-                    <div className="w-full md:w-1/2 p-6 md:p-8 bg-white rounded-2xl shadow-sm border border-stone-200 relative">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 shrink-0 bg-stone-100 rounded-xl flex items-center justify-center text-stone-600 border border-stone-200">
-                          <step.icon className="w-6 h-6" />
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-3 mb-2">
-                            <span className="text-2xl font-bold text-stone-900 md:hidden">{step.letter}</span>
-                            <h3 className="text-xl font-bold text-stone-900">{step.title}</h3>
-                          </div>
-                          <p className="text-amber-700 font-medium mb-3">{step.focus}</p>
-                          <p className="text-stone-600 leading-relaxed text-sm md:text-base">{step.desc}</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="hidden md:block w-1/2"></div>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
+          <VillageModelInteractive />
           
           <ScrollReveal delay={300}>
             <div className="mt-20 p-8 bg-stone-900 text-stone-100 rounded-2xl max-w-4xl mx-auto text-center border border-stone-800 shadow-xl">
@@ -194,12 +152,12 @@ export default function Home() {
                 </p>
                 <div className="pt-4">
                   <Button size="lg" asChild>
-                    <Link href="/training">Discover The 3-Skill Model</Link>
+                    <Link href="/training">Discover The HIGH Framework</Link>
                   </Button>
                 </div>
               </div>
               <div className="flex-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {["Soft Skills", "Hard Skills", "Execution Skills", "Industry Ready"].map((skill, i) => (
+                {["Hard Skills", "Industry Ready", "Get-it-done (Execution) Skills", "Human (Soft) Skills"].map((skill, i) => (
                   <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 text-center font-bold text-stone-900 flex flex-col items-center justify-center gap-3">
                     <CheckCircle2 className="w-8 h-8 text-amber-600" />
                     {skill}

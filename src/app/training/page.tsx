@@ -37,55 +37,69 @@ export default function TrainingPage() {
         </div>
       </section>
 
-      {/* The 3-Skill Model */}
+      {/* The HIGH Framework */}
       <section className="py-24 bg-stone-100 border-b border-stone-200">
-        <div className="container mx-auto px-4 md:px-8 max-w-6xl">
+        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <ScrollReveal>
             <SectionHeader 
-              title="The VillageSoft 3-Skill Model" 
-              subtitle="Knowledge creates potential. Execution transforms potential into performance. We develop the complete professional through three core pillars."
+              title="The VillageSoft HIGH Framework" 
+              subtitle="Knowledge creates potential. Execution transforms potential into performance. We develop the complete professional through four core pillars."
             />
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
             <ScrollReveal delay={0}>
-              <div className="bg-white p-8 rounded-2xl border border-stone-200 shadow-sm h-full relative overflow-hidden group hover:border-amber-500/30 transition-colors">
-                <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 border border-blue-100">
-                  <MessagesSquare className="w-7 h-7" />
+              <div className="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm h-full relative overflow-hidden group hover:border-amber-500/30 transition-colors">
+                <div className="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center mb-6 border border-amber-100">
+                  <Code className="w-6 h-6" />
                 </div>
-                <div className="absolute top-0 right-0 bg-stone-100 text-stone-400 font-black text-8xl opacity-20 -mt-4 -mr-4 pointer-events-none group-hover:text-blue-100 transition-colors">1</div>
-                <h3 className="text-2xl font-bold text-stone-900 mb-2">Soft Skills</h3>
-                <h4 className="text-amber-700 font-medium mb-4">Communicate & Collaborate</h4>
-                <p className="text-stone-600 leading-relaxed">
-                  Business communication, presentation, teamwork, professional etiquette, critical thinking, problem solving, interview readiness and customer orientation.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={100}>
-              <div className="bg-white p-8 rounded-2xl border border-stone-200 shadow-sm h-full relative overflow-hidden group hover:border-amber-500/30 transition-colors">
-                <div className="w-14 h-14 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center mb-6 border border-amber-100">
-                  <Code className="w-7 h-7" />
-                </div>
-                <div className="absolute top-0 right-0 bg-stone-100 text-stone-400 font-black text-8xl opacity-20 -mt-4 -mr-4 pointer-events-none group-hover:text-amber-100 transition-colors">2</div>
-                <h3 className="text-2xl font-bold text-stone-900 mb-2">Hard Skills</h3>
-                <h4 className="text-amber-700 font-medium mb-4">Understand & Build</h4>
-                <p className="text-stone-600 leading-relaxed">
+                <div className="absolute top-0 right-0 bg-stone-100 text-stone-400 font-black text-8xl opacity-10 -mt-2 -mr-2 pointer-events-none group-hover:text-amber-100 transition-colors">H</div>
+                <h3 className="text-xl font-bold text-stone-900 mb-2">Hard Skills</h3>
+                <h4 className="text-amber-700 text-sm font-medium mb-3">Understand & Build</h4>
+                <p className="text-stone-600 text-sm leading-relaxed">
                   Industry-relevant capabilities across Data & Analytics, SQL, Python, Business Intelligence, AI, GenAI, AI Validation, automation and emerging technologies.
                 </p>
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={200}>
-              <div className="bg-white p-8 rounded-2xl border border-stone-200 shadow-sm h-full relative overflow-hidden group hover:border-amber-500/30 transition-colors">
-                <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-6 border border-emerald-100">
-                  <PlayCircle className="w-7 h-7" />
+            <ScrollReveal delay={100}>
+              <div className="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm h-full relative overflow-hidden group hover:border-amber-500/30 transition-colors">
+                <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6 border border-indigo-100">
+                  <Briefcase className="w-6 h-6" />
                 </div>
-                <div className="absolute top-0 right-0 bg-stone-100 text-stone-400 font-black text-8xl opacity-20 -mt-4 -mr-4 pointer-events-none group-hover:text-emerald-100 transition-colors">3</div>
-                <h3 className="text-2xl font-bold text-stone-900 mb-2">Execution Skills</h3>
-                <h4 className="text-amber-700 font-medium mb-4">Own & Deliver</h4>
-                <p className="text-stone-600 leading-relaxed">
+                <div className="absolute top-0 right-0 bg-stone-100 text-stone-400 font-black text-8xl opacity-10 -mt-2 -mr-2 pointer-events-none group-hover:text-indigo-100 transition-colors">I</div>
+                <h3 className="text-xl font-bold text-stone-900 mb-2">Industry Ready</h3>
+                <h4 className="text-amber-700 text-sm font-medium mb-3">Corporate Context</h4>
+                <p className="text-stone-600 text-sm leading-relaxed">
+                  Understanding business priorities, corporate environments, industry domains, and aligning technological solutions to real-world workplace expectations.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={200}>
+              <div className="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm h-full relative overflow-hidden group hover:border-amber-500/30 transition-colors">
+                <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-6 border border-emerald-100">
+                  <PlayCircle className="w-6 h-6" />
+                </div>
+                <div className="absolute top-0 right-0 bg-stone-100 text-stone-400 font-black text-8xl opacity-10 -mt-2 -mr-2 pointer-events-none group-hover:text-emerald-100 transition-colors">G</div>
+                <h3 className="text-xl font-bold text-stone-900 mb-2">Get-it-done Skills</h3>
+                <h4 className="text-amber-700 text-sm font-medium mb-3">Own & Deliver</h4>
+                <p className="text-stone-600 text-sm leading-relaxed">
                   Requirement understanding, planning, project execution, Agile ways of working, documentation, status reporting, escalation, accountability and outcome-based thinking.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={300}>
+              <div className="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm h-full relative overflow-hidden group hover:border-amber-500/30 transition-colors">
+                <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 border border-blue-100">
+                  <MessagesSquare className="w-6 h-6" />
+                </div>
+                <div className="absolute top-0 right-0 bg-stone-100 text-stone-400 font-black text-8xl opacity-10 -mt-2 -mr-2 pointer-events-none group-hover:text-blue-100 transition-colors">H</div>
+                <h3 className="text-xl font-bold text-stone-900 mb-2">Human (Soft) Skills</h3>
+                <h4 className="text-amber-700 text-sm font-medium mb-3">Communicate & Collaborate</h4>
+                <p className="text-stone-600 text-sm leading-relaxed">
+                  Business communication, presentation, teamwork, professional etiquette, critical thinking, problem solving, interview readiness and customer orientation.
                 </p>
               </div>
             </ScrollReveal>
