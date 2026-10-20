@@ -1,7 +1,8 @@
 import { siteConfig } from "@/config/site";
-import { Button } from "@/components/ui/button";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { ContactForm } from "@/components/ContactForm";
+
 export const metadata = {
   title: "Contact",
   description: "Get in touch with VillageSoft.",
@@ -32,35 +33,45 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-2xl font-semibold mb-6 text-stone-900">Contact Information</h3>
                   <p className="text-stone-600 mb-8">
-                    Reach out to us directly or fill out the form, and a member of our team will get back to you promptly.
+                    Reach out to our teams directly or submit the inquiry form, and a member of our team will get back to you promptly.
                   </p>
                 </div>
                 
                 <div className="space-y-6">
+                  {/* Sales & Business Enquiries */}
                   <div className="flex items-start">
                     <div className="w-10 h-10 bg-white border border-stone-200 text-amber-700 rounded-lg flex items-center justify-center mr-4 shrink-0 shadow-sm">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-stone-900 mb-1">Email</h4>
-                      <a href={`mailto:${siteConfig.contact.email}`} className="text-stone-600 hover:text-amber-700 transition-colors">
-                        {siteConfig.contact.email}
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-10 h-10 bg-white border border-stone-200 text-amber-700 rounded-lg flex items-center justify-center mr-4 shrink-0 shadow-sm">
-                      <Phone className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-stone-900 mb-1">Phone</h4>
-                      <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="text-stone-600 hover:text-amber-700 transition-colors">
-                        {siteConfig.contact.phone}
+                      <h4 className="font-medium text-stone-900 mb-1">Sales & Partnerships</h4>
+                      <a 
+                        href={`mailto:${siteConfig.contact.salesEmail}`} 
+                        className="text-stone-600 hover:text-amber-700 transition-colors break-all"
+                      >
+                        {siteConfig.contact.salesEmail}
                       </a>
                     </div>
                   </div>
 
+                  {/* HR & Careers */}
+                  <div className="flex items-start">
+                    <div className="w-10 h-10 bg-white border border-stone-200 text-amber-700 rounded-lg flex items-center justify-center mr-4 shrink-0 shadow-sm">
+                      <Mail className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-stone-900 mb-0.5">HR & Careers</h4>
+                      <p className="text-xs text-stone-500 font-medium mb-1">HR Villagesoft Technologies</p>
+                      <a 
+                        href={`mailto:${siteConfig.contact.hrEmail}`} 
+                        className="text-stone-600 hover:text-amber-700 transition-colors break-all"
+                      >
+                        {siteConfig.contact.hrEmail}
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Location */}
                   <div className="flex items-start">
                     <div className="w-10 h-10 bg-white border border-stone-200 text-amber-700 rounded-lg flex items-center justify-center mr-4 shrink-0 shadow-sm">
                       <MapPin className="w-5 h-5" />
@@ -78,82 +89,8 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="md:col-span-3">
-              <ScrollReveal delay={100} className="bg-white border border-stone-200 shadow-sm rounded-2xl p-8 h-full">
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium text-stone-900">Name</label>
-                      <input 
-                        type="text" 
-                        id="name" 
-                        className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-600"
-                        placeholder="Jane Doe" 
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium text-stone-900">Email</label>
-                      <input 
-                        type="email" 
-                        id="email" 
-                        className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-600"
-                        placeholder="jane@company.com" 
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="phone" className="text-sm font-medium text-stone-900">Phone</label>
-                      <input 
-                        type="tel" 
-                        id="phone" 
-                        className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-600"
-                        placeholder="+91 XXXXX XXXXX" 
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="company" className="text-sm font-medium text-stone-900">Company</label>
-                      <input 
-                        type="text" 
-                        id="company" 
-                        className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-600"
-                        placeholder="Company Name" 
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="service" className="text-sm font-medium text-stone-900">Service of Interest</label>
-                    <select 
-                      id="service"
-                      defaultValue=""
-                      className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-600"
-                    >
-                      <option value="" disabled>Select a service...</option>
-                      <option value="ai-consulting">AI & Technology Consulting</option>
-                      <option value="data-analytics">Data Analytics</option>
-                      <option value="data-validation">Data Validation</option>
-                      <option value="management-services">Management Services</option>
-                      <option value="technology-solutions">Technology Solutions</option>
-                      <option value="training">Training</option>
-                      <option value="general">General Enquiry</option>
-                    </select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium text-stone-900">Message</label>
-                    <textarea 
-                      id="message" 
-                      rows={5}
-                      className="flex min-h-[80px] w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-600 resize-y"
-                      placeholder="How can we help you?" 
-                    ></textarea>
-                  </div>
-
-                  <Button type="button" className="w-full h-11 text-base bg-amber-600 hover:bg-amber-700 text-white">
-                    Send Message
-                  </Button>
-                </form>
+              <ScrollReveal delay={100} className="h-full">
+                <ContactForm />
               </ScrollReveal>
             </div>
           </div>

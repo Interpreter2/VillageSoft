@@ -3,11 +3,12 @@ export const siteConfig = {
   description: "Technology, consulting, management, and professional training company.",
   tagline: "Building Skills. Enabling Businesses. Creating Real-World Impact.",
   contact: {
-    // PLACEHOLDER: Replace with VillageSoft's official email address.
-    email: "info@villagesoft.com",
-    // PLACEHOLDER: Replace with official company phone number.
-    phone: "+91 XXXXX XXXXX",
-    // PLACEHOLDER: Confirm official company location.
+    // Official VillageSoft contact emails
+    email: "sales@villagesofttechnologies.com",
+    salesEmail: "sales@villagesofttechnologies.com",
+    hrEmail: "hr@villagesofttechnologies.com",
+    phone: "",
+    // Location
     location: "Hyderabad, India",
   },
   navigation: [

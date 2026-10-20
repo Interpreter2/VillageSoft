@@ -1,4 +1,4 @@
-﻿import * as React from "react";
+import * as React from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
@@ -57,15 +57,22 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-primary transition-colors">
-                  {siteConfig.contact.email}
+                <a href={`mailto:${siteConfig.contact.salesEmail}`} className="hover:text-primary transition-colors">
+                  Sales: {siteConfig.contact.salesEmail}
                 </a>
               </li>
               <li>
-                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="hover:text-primary transition-colors">
-                  {siteConfig.contact.phone}
+                <a href={`mailto:${siteConfig.contact.hrEmail}`} className="hover:text-primary transition-colors">
+                  HR: {siteConfig.contact.hrEmail}
                 </a>
               </li>
+              {siteConfig.contact.phone ? (
+                <li>
+                  <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="hover:text-primary transition-colors">
+                    {siteConfig.contact.phone}
+                  </a>
+                </li>
+              ) : null}
               <li>
                 {siteConfig.contact.location}
               </li>
@@ -74,7 +81,7 @@ export function Footer() {
         </div>
         
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row items-center justify-between text-xs text-muted-foreground">
-          <p>Â© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <span className="cursor-not-allowed opacity-50 hover:opacity-50" title="Placeholder for LinkedIn">LinkedIn</span>
             <span className="cursor-not-allowed opacity-50 hover:opacity-50" title="Placeholder for Twitter">Twitter</span>
