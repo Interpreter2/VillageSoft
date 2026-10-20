@@ -41,8 +41,8 @@ export function VillageModelInteractive() {
                   className={cn(
                     "w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-2xl flex items-center justify-center text-2xl md:text-4xl font-black transition-all duration-300 border-2",
                     isActive 
-                      ? "bg-amber-600 text-white border-amber-600 shadow-lg scale-110" 
-                      : "bg-white text-stone-400 border-stone-200 hover:border-amber-400 hover:text-amber-500 hover:scale-105"
+                      ? "bg-[#3d8c35] text-white border-[#3d8c35] shadow-lg shadow-[#4ea645]/25 scale-110" 
+                      : "bg-white text-stone-400 border-stone-200 hover:border-[#93c83c] hover:text-[#3d8c35] hover:scale-105"
                   )}
                 >
                   {step.letter}
@@ -50,7 +50,7 @@ export function VillageModelInteractive() {
                 <div 
                   className={cn(
                     "absolute -bottom-6 text-xs md:text-sm font-bold transition-all duration-300 whitespace-nowrap",
-                    isActive ? "text-amber-700 opacity-100" : "text-stone-400 opacity-0 group-hover:opacity-100"
+                    isActive ? "text-[#2e6d27] opacity-100" : "text-stone-400 opacity-0 group-hover:opacity-100"
                   )}
                 >
                   {step.title}
@@ -66,20 +66,20 @@ export function VillageModelInteractive() {
         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-stone-200 min-h-[300px] flex items-center justify-center relative overflow-hidden">
           {/* Subtle Background Icon */}
           <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 opacity-[0.03] pointer-events-none">
-            <ActiveIcon className="w-96 h-96" />
+            <ActiveIcon className="w-96 h-96 text-[#3d8c35]" />
           </div>
           
           <div className="w-full max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12 relative z-10">
-            <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 bg-stone-50 rounded-full flex items-center justify-center text-amber-600 border-8 border-stone-100 shadow-inner">
+            <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 bg-[#eef6ed] rounded-full flex items-center justify-center text-[#3d8c35] border-8 border-stone-100 shadow-inner">
               <ActiveIcon className="w-10 h-10 md:w-14 md:h-14" />
             </div>
             
             <div className="text-center md:text-left flex-1 animate-in fade-in slide-in-from-bottom-4 duration-500" key={activeId}>
               <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
-                <span className="text-3xl font-black text-amber-600">{activeStep.letter}</span>
+                <span className="text-3xl font-black text-[#3d8c35]">{activeStep.letter}</span>
                 <h3 className="text-2xl md:text-3xl font-bold text-stone-900">{activeStep.title}</h3>
               </div>
-              <p className="text-xl text-amber-700 font-medium mb-4">{activeStep.focus}</p>
+              <p className="text-xl text-[#2e6d27] font-medium mb-4">{activeStep.focus}</p>
               <p className="text-lg text-stone-600 leading-relaxed">
                 {activeStep.desc}
               </p>

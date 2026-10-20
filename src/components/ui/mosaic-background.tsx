@@ -13,9 +13,9 @@ export function MosaicBackground({ className }: MosaicBackgroundProps) {
       <div className="absolute inset-0 mosaic-pattern" />
       
       {/* Gradient fades to blend the edges into the background */}
-      <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-stone-950/20" />
-      <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-transparent to-stone-950" />
-      <div className="absolute inset-0 bg-gradient-to-l from-stone-950 via-transparent to-stone-950" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0d1710] via-transparent to-[#0d1710]/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0d1710] via-transparent to-[#0d1710]" />
+      <div className="absolute inset-0 bg-gradient-to-l from-[#0d1710] via-transparent to-[#0d1710]" />
     </div>
   );
 }

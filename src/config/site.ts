@@ -1,15 +1,17 @@
 export const siteConfig = {
   name: "VillageSoft",
+  legalName: "Village Soft Pvt. Ltd.",
   description: "Technology, consulting, management, and professional training company.",
   tagline: "Building Skills. Enabling Businesses. Creating Real-World Impact.",
   contact: {
-    // Official VillageSoft contact emails
-    email: "sales@villagesofttechnologies.com",
+    // Official VillageSoft contact details from letterhead
+    email: "hr@villagesofttechnologies.com",
     salesEmail: "sales@villagesofttechnologies.com",
     hrEmail: "hr@villagesofttechnologies.com",
-    phone: "",
-    // Location
-    location: "Hyderabad, India",
+    phone: "+91 93811 12434",
+    website: "www.villagesofttechnologies.com",
+    location: "Plot No. 347, 80P, Nallagandla Taranagar, Serilingampally, Hyderabad, Telangana - 500019",
+    city: "Hyderabad, India",
   },
   navigation: [
     { title: "Home", href: "/" },

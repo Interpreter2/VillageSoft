@@ -86,12 +86,12 @@ export default function ServicesPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-stone-900 text-white border-b border-stone-800">
+      <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-[#0d1710] text-white border-b border-[#182e1d]">
         <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center">
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
               Expertise in <br className="md:hidden" />
-              <TextRotator items={rotatingItems} className="text-amber-500" />
+              <TextRotator items={rotatingItems} className="text-[#93c83c]" />
             </h1>
             <p className="text-xl text-stone-300 leading-relaxed max-w-2xl mx-auto">
               Transform Today. Build for Tomorrow.
@@ -103,19 +103,19 @@ export default function ServicesPage() {
       <div>
         {serviceDetails.map((service, index) => {
           const isEven = index % 2 === 0;
-          const bgClass = isEven ? "bg-stone-100 border-y border-stone-200 text-stone-900" : "bg-white border-y border-stone-100";
+          const bgClass = isEven ? "bg-[#f4f8f3] border-y border-[#e2ece0] text-stone-900" : "bg-white border-y border-[#eef5eb]";
           
           return (
             <section key={service.id} id={service.id} className={`py-24 ${bgClass}`}>
               <div className="container mx-auto px-4 md:px-8 max-w-6xl">
                 <div className={`flex flex-col md:flex-row gap-12 items-center ${isEven ? '' : 'md:flex-row-reverse'}`}>
                   <ScrollReveal className="flex-1 space-y-6">
-                    <div className="w-16 h-16 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center border border-amber-200 shadow-sm">
+                    <div className="w-16 h-16 rounded-2xl bg-[#eef6ed] text-[#3d8c35] flex items-center justify-center border border-[#cbe3c8] shadow-sm">
                       {service.icon}
                     </div>
                     <div>
                       <h2 className="text-3xl font-bold text-stone-900">{service.title}</h2>
-                      <h3 className="text-xl font-medium text-amber-700 mt-2">{service.subtitle}</h3>
+                      <h3 className="text-xl font-medium text-[#2e6d27] mt-2">{service.subtitle}</h3>
                     </div>
                     <p className="text-lg leading-relaxed text-stone-600">
                       {service.description}
@@ -126,42 +126,42 @@ export default function ServicesPage() {
                       <ul className="grid grid-cols-1 gap-3">
                         {service.capabilities.map((cap, i) => (
                           <li key={i} className="flex items-start text-stone-700">
-                            <span className="w-1.5 h-1.5 rounded-full bg-amber-600 mt-2 mr-3 shrink-0" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#3d8c35] mt-2 mr-3 shrink-0" />
                             <span className="text-base">{cap}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    <div className="pt-4 bg-stone-50 p-4 rounded-lg border border-stone-200">
+                    <div className="pt-4 bg-white p-4 rounded-lg border border-[#e2ece0] shadow-xs">
                       <p className="text-sm font-medium text-stone-800">
-                        <span className="text-amber-700 font-bold">Outcome: </span> 
+                        <span className="text-[#2e6d27] font-bold">Outcome: </span> 
                         {service.outcome}
                       </p>
                     </div>
 
                     <div className="pt-6">
-                      <Button variant="outline" className="border-stone-300 text-stone-700 hover:bg-stone-100" asChild>
+                      <Button variant="outline" className="border-[#cbe3c8] text-stone-800 hover:bg-[#eef6ed] hover:text-[#2e6d27]" asChild>
                         <Link href={`/contact?service=${service.id}`}>Enquire About This Service</Link>
                       </Button>
                     </div>
                   </ScrollReveal>
                   
                   <ScrollReveal delay={100} className="flex-1 w-full">
-                    <div className="rounded-3xl border border-stone-200 aspect-square md:aspect-[4/3] flex flex-col items-center justify-center p-8 shadow-sm bg-stone-50 relative overflow-hidden">
-                       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-stone-200/50 via-stone-50 to-stone-50"></div>
+                    <div className="rounded-3xl border border-[#e2ece0] aspect-square md:aspect-[4/3] flex flex-col items-center justify-center p-8 shadow-sm bg-white relative overflow-hidden">
+                       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#eef6ed]/70 via-white to-white"></div>
                        <div className="relative z-10 text-center space-y-4">
                           {service.id === "data-analytics" && (
-                            <div className="font-mono text-sm text-stone-500 font-semibold tracking-wider">Data &rarr; Insights &rarr; Decisions &rarr; Actions</div>
+                            <div className="font-mono text-sm text-[#3d8c35] font-semibold tracking-wider">Data &rarr; Insights &rarr; Decisions &rarr; Actions</div>
                           )}
                           {service.id === "artificial-intelligence" && (
-                            <div className="font-mono text-sm text-stone-500 font-semibold tracking-wider">Start with the business problem.</div>
+                            <div className="font-mono text-sm text-[#3d8c35] font-semibold tracking-wider">Start with the business problem.</div>
                           )}
                           {service.id === "ai-validation" && (
-                            <div className="font-mono text-sm text-stone-500 font-semibold tracking-wider">Validate Data &rarr; Model &rarr; Workflow &rarr; Outcome</div>
+                            <div className="font-mono text-sm text-[#3d8c35] font-semibold tracking-wider">Validate Data &rarr; Model &rarr; Workflow &rarr; Outcome</div>
                           )}
                           {service.id === "talent-transformation" && (
-                            <div className="font-mono text-sm text-stone-500 font-semibold tracking-wider">Knowledge &rarr; Execution &rarr; Performance</div>
+                            <div className="font-mono text-sm text-[#3d8c35] font-semibold tracking-wider">Knowledge &rarr; Execution &rarr; Performance</div>
                           )}
                        </div>
                     </div>
@@ -174,11 +174,11 @@ export default function ServicesPage() {
       </div>
 
       {/* For Enterprises Lifecycle */}
-      <section className="bg-stone-900 py-24 text-stone-50 border-t border-stone-800">
+      <section className="bg-[#0d1710] py-24 text-stone-50 border-t border-[#182e1d]">
         <div className="container mx-auto px-4 md:px-8 max-w-5xl text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">For Enterprises</h2>
-            <p className="text-xl text-amber-500 font-medium mb-16">
+            <p className="text-xl text-[#93c83c] font-medium mb-16">
               Transform Today. Build for Tomorrow.
             </p>
           </ScrollReveal>
@@ -192,8 +192,8 @@ export default function ServicesPage() {
               { title: "EXECUTE", desc: "Translate transformation strategy into disciplined action and measurable outcomes." }
             ].map((step, idx) => (
               <ScrollReveal key={idx} delay={idx * 100}>
-                <div className="bg-stone-800 p-6 rounded-xl border border-stone-700 h-full flex flex-col hover:border-amber-500/50 transition-colors">
-                  <h3 className="text-amber-500 font-bold tracking-widest text-sm mb-3">{step.title}</h3>
+                <div className="bg-[#142617] p-6 rounded-xl border border-[#223a26] h-full flex flex-col hover:border-[#4ea645]/60 transition-colors">
+                  <h3 className="text-[#93c83c] font-bold tracking-widest text-sm mb-3">{step.title}</h3>
                   <p className="text-stone-300 text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </ScrollReveal>

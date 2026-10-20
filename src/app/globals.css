@@ -33,48 +33,48 @@
 }
 
 :root {
-  --background: #e7e5e4; /* stone-200 */
-  --foreground: #1c1917; /* stone-900 */
+  --background: #f8faf7;
+  --foreground: #221e1f; /* Charcoal from letterhead */
   --card: #ffffff;
-  --card-foreground: #1c1917;
+  --card-foreground: #221e1f;
   --popover: #ffffff;
-  --popover-foreground: #1c1917;
-  --primary: #78350f; /* amber-900 */
+  --popover-foreground: #221e1f;
+  --primary: #3d8c35; /* Primary green from letterhead, balanced for contrast */
   --primary-foreground: #ffffff;
-  --secondary: #d6d3d1; /* stone-300 */
-  --secondary-foreground: #1c1917;
-  --muted: #d6d3d1; /* stone-300 */
-  --muted-foreground: #57534e; /* stone-600 */
-  --accent: #d6d3d1;
-  --accent-foreground: #1c1917;
-  --destructive: #ef4444; /* red-500 */
+  --secondary: #eef6ed; /* Soft mint/sage */
+  --secondary-foreground: #1e4d1b;
+  --muted: #edf4eb;
+  --muted-foreground: #556653;
+  --accent: #93c83c; /* Fresh sprout green from letterhead */
+  --accent-foreground: #142812;
+  --destructive: #ef4444;
   --destructive-foreground: #fafaf9;
-  --border: #e7e5e4; /* stone-200 */
-  --input: #e7e5e4;
-  --ring: #78350f;
+  --border: #e2ece0;
+  --input: #e2ece0;
+  --ring: #4ea645;
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: #0c0a09; /* stone-950 */
-  --foreground: #fafaf9;
-  --card: #1c1917;
-  --card-foreground: #fafaf9;
-  --popover: #1c1917;
-  --popover-foreground: #fafaf9;
-  --primary: #d97706; /* amber-500 */
-  --primary-foreground: #0c0a09;
-  --secondary: #292524; /* stone-800 */
-  --secondary-foreground: #fafaf9;
-  --muted: #292524;
-  --muted-foreground: #a8a29e; /* stone-400 */
-  --accent: #292524;
-  --accent-foreground: #fafaf9;
-  --destructive: #7f1d1d; /* red-900 */
+  --background: #0c140e; /* Deep forest noir */
+  --foreground: #f4f8f3;
+  --card: #121e15;
+  --card-foreground: #f4f8f3;
+  --popover: #121e15;
+  --popover-foreground: #f4f8f3;
+  --primary: #4ea645; /* Letterhead signature green */
+  --primary-foreground: #ffffff;
+  --secondary: #17261a;
+  --secondary-foreground: #f4f8f3;
+  --muted: #17261a;
+  --muted-foreground: #98ac95;
+  --accent: #93c83c; /* Letterhead sprout green */
+  --accent-foreground: #0c140e;
+  --destructive: #7f1d1d;
   --destructive-foreground: #fafaf9;
-  --border: #292524;
-  --input: #292524;
-  --ring: #d97706;
+  --border: #1e3322;
+  --input: #1e3322;
+  --ring: #4ea645;
 }
 
 @layer base {
@@ -102,13 +102,24 @@
 
   .mosaic-pattern {
     background-image: 
-      linear-gradient(to right, rgba(217, 119, 6, 0.15) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(217, 119, 6, 0.15) 1px, transparent 1px);
+      linear-gradient(to right, rgba(78, 166, 69, 0.12) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(78, 166, 69, 0.12) 1px, transparent 1px);
     background-size: 50px 50px;
     animation: moveMosaic 20s linear infinite;
     width: 200%;
     height: 200%;
     transform: translate(-25%, -25%);
+  }
+
+  /* Signature letterhead dual-tone stripe */
+  .letterhead-stripe {
+    height: 4px;
+    background: linear-gradient(90deg, #93c83c 0%, #93c83c 45px, #4ea645 45px, #4ea645 100%);
+  }
+
+  .letterhead-stripe-thick {
+    height: 6px;
+    background: linear-gradient(90deg, #93c83c 0%, #93c83c 65px, #4ea645 65px, #4ea645 100%);
   }
 
   @keyframes ticker {

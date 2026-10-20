@@ -28,7 +28,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} font-sans h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-stone-200 text-stone-900">
+      <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-[#93c83c]/30 selection:text-[#1a3311]">
         <Navbar />
         <main className="flex-1">
           {children}

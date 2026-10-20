@@ -106,7 +106,7 @@ export function ContactForm() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="space-y-2">
             <label htmlFor="name" className="text-sm font-medium text-stone-900">
-              Name <span className="text-amber-700">*</span>
+              Name <span className="text-[#327a2b]">*</span>
             </label>
             <input
               type="text"
@@ -115,13 +115,13 @@ export function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               disabled={status === "loading"}
-              className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-600 disabled:opacity-50"
+              className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#4ea645] disabled:opacity-50"
               placeholder="Jane Doe"
             />
           </div>
           <div className="space-y-2">
             <label htmlFor="email" className="text-sm font-medium text-stone-900">
-              Email <span className="text-amber-700">*</span>
+              Email <span className="text-[#327a2b]">*</span>
             </label>
             <input
               type="email"
@@ -130,7 +130,7 @@ export function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               disabled={status === "loading"}
-              className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-600 disabled:opacity-50"
+              className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#4ea645] disabled:opacity-50"
               placeholder="jane@company.com"
             />
           </div>
@@ -147,7 +147,7 @@ export function ContactForm() {
               value={formData.phone}
               onChange={handleChange}
               disabled={status === "loading"}
-              className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-600 disabled:opacity-50"
+              className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#4ea645] disabled:opacity-50"
               placeholder="+91 98765 43210"
             />
           </div>
@@ -161,7 +161,7 @@ export function ContactForm() {
               value={formData.company}
               onChange={handleChange}
               disabled={status === "loading"}
-              className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-600 disabled:opacity-50"
+              className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#4ea645] disabled:opacity-50"
               placeholder="Organization Name"
             />
           </div>
@@ -176,7 +176,7 @@ export function ContactForm() {
             value={formData.service}
             onChange={handleChange}
             disabled={status === "loading"}
-            className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-600 disabled:opacity-50"
+            className="flex h-10 w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#4ea645] disabled:opacity-50"
           >
             <option value="">Select an area of interest...</option>
             <option value="Data & Analytics">Data & Analytics</option>
@@ -191,7 +191,7 @@ export function ContactForm() {
 
         <div className="space-y-2">
           <label htmlFor="message" className="text-sm font-medium text-stone-900">
-            Message <span className="text-amber-700">*</span>
+            Message <span className="text-[#327a2b]">*</span>
           </label>
           <textarea
             id="message"
@@ -200,7 +200,7 @@ export function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             disabled={status === "loading"}
-            className="flex min-h-[100px] w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-600 resize-y disabled:opacity-50"
+            className="flex min-h-[100px] w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#4ea645] resize-y disabled:opacity-50"
             placeholder="Tell us about your requirements or question..."
           ></textarea>
         </div>
@@ -208,7 +208,7 @@ export function ContactForm() {
         <Button
           type="submit"
           disabled={status === "loading"}
-          className="w-full h-11 text-base bg-amber-600 hover:bg-amber-700 text-white font-medium shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer disabled:cursor-not-allowed"
+          className="w-full h-11 text-base bg-[#3d8c35] hover:bg-[#34782d] text-white font-medium shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer disabled:cursor-not-allowed"
         >
           {status === "loading" ? (
             <>
